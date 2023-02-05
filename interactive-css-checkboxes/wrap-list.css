@@ -1,0 +1,56 @@
+/** horizontal-pan **/
+@media screen {
+  #body:has(#pan-block:checked) horizontal-pan {
+    display: block;
+  }
+  
+  #body:has(#pan-height:checked) horizontal-pan {
+    height: 300px;
+  }
+  
+  #body:has(#pan-overflow:checked) horizontal-pan {
+    overflow: auto clip;
+  }
+}
+
+/** wrap-list **/
+@media screen {
+  #body:has(#wrap-flex:checked) wrap-list {
+    display: flex;
+  }
+  
+  #body:has(#wrap-flow:checked) wrap-list {
+    flex-flow: column wrap;
+  }
+  
+  #body:has(#wrap-width:checked) wrap-list {
+    width: min-content;
+  }
+  
+  #body:has(#wrap-height:checked) wrap-list {
+    height: 100%;
+  }
+  
+  #body:has(#wrap-gap:checked) wrap-list {
+    gap: 4px 20px;
+  }
+}
+
+/** wrap-list>li **/
+@media screen {
+  #body:has(#li-wrap:checked) wrap-list>li {
+    white-space: nowrap;
+  }
+  
+  #body:has(#li-over:checked) wrap-list>li {
+    overflow: hidden;
+  }
+  
+  #body:has(#li-ellipsis:checked) wrap-list>li {
+    text-overflow: ellipsis;
+  }
+  
+  #body:has(#li-width:checked) wrap-list>li {
+    max-width: 250px;
+  }
+}

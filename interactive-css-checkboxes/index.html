@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="wrap-list.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Panning Wrap List</title>
+</head>
+
+<body id="body">
+  <form>
+    <label>
+      <input type="checkbox" id="reset" checked>
+      reset browser default styles
+    </label>
+
+    <hr>
+
+    <fieldset>
+      <pre
+        ><code
+          ><b>horizontal-pan</b> {
+            <label
+              ><input type="checkbox" id="pan-block" checked
+              ><b>display: block;</b
+            ></label
+            
+            ><label
+              ><input type="checkbox" id="pan-height" checked
+              ><b>height: 300px;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="pan-overflow" checked
+              ><b>overflow: auto clip;</b
+            ></label>
+}
+        </code>
+      </pre>
+
+      <pre
+        ><code
+          ><b>wrap-list</b> {
+            <label
+              ><input type="checkbox" id="wrap-flex" checked
+              ><b>display: flex;</b
+            ></label
+            
+            ><label
+              ><input type="checkbox" id="wrap-flow" checked
+              ><b>flex-flow: column wrap;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="wrap-width" checked
+              ><b>width: min-content;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="wrap-height" checked
+              ><b>height: 100%;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="wrap-gap" checked
+              ><b>gap: 4px 20px;</b
+            ></label>
+}
+        </code>
+      </pre>
+
+      <pre
+        ><code
+          ><b>wrap-list>li</b> {
+            <label
+              ><input type="checkbox" id="li-wrap" checked
+              ><b>white-space: nowrap;</b
+            ></label
+            
+            ><label
+              ><input type="checkbox" id="li-over" checked
+              ><b>overflow: hidden;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="li-ellipsis" checked
+              ><b>text-overflow: ellipsis;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="li-width" checked
+              ><b>max-width: 250px;</b
+            ></label
+  
+            ></label>
+}
+        </code>
+      </pre>
+    </fieldset>
+  </form>
+
+  <div>
+    <horizontal-pan>
+      <wrap-list>
+        <li>lorem 1</li>
+        <li>lorem 2</li>
+        <li>lorem 3 very long names can be there too</li>
+        <li>lorem 4</li>
+        ...
+        <li>lorem 999</li>
+      </wrap-list>
+    </horizontal-pan>
+  </di>
+
+  <script>
+    document.currentScript.remove()
+
+    body.innerHTML = body.innerHTML.replace('...', Array.from(Array(994).keys(),
+      i => `<li>lorem ${i + 5}${Math.random() < .1 ? ' very long names can be there too' : ''}</li>`
+    ).join(''))
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+#body:has(#reset) {
+  padding: 10vmin;
+}
+
+#body:has(#reset) horizontal-pan {
+  padding: 10px;
+}
+
+#body:has(#pan-block:checked) horizontal-pan {
+  box-shadow: 7px 3px 10px 4px #0006
+}
+
+#body:has(#reset) form {
+  padding: 5vmin; 
+  user-select: none;
+}
+
+#body:has(#reset) label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#body:has(#reset) hr {
+  height: 20px;
+  border: none;
+}
+
+#body:has(#reset) fieldset {
+  display: flex;
+  gap: 5vmin;
+  border: none;
+}
+
+#body:has(#reset) pre {
+  font-family: monospace;
+}

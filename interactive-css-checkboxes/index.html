@@ -22,8 +22,7 @@
     <hr>
 
     <fieldset>
-      <pre
-        ><code
+      <pre><code
           ><b>horizontal-pan</b> {
             <label
               ><input type="checkbox" id="pan-block" checked
@@ -38,13 +37,12 @@
             ><label
               ><input type="checkbox" id="pan-overflow" checked
               ><b>overflow: auto clip;</b
-            ></label>
-}
+            ></label
+          ><br>}
         </code>
       </pre>
 
-      <pre
-        ><code
+      <pre><code
           ><b>wrap-list</b> {
             <label
               ><input type="checkbox" id="wrap-flex" checked
@@ -69,13 +67,12 @@
             ><label
               ><input type="checkbox" id="wrap-gap" checked
               ><b>gap: 4px 20px;</b
-            ></label>
-}
+            ></label
+          ><br>}
         </code>
       </pre>
 
-      <pre
-        ><code
+      <pre><code
           ><b>wrap-list>li</b> {
             <label
               ><input type="checkbox" id="li-wrap" checked
@@ -96,9 +93,7 @@
               ><input type="checkbox" id="li-width" checked
               ><b>max-width: 250px;</b
             ></label
-  
-            ></label>
-}
+          ><br>}
         </code>
       </pre>
     </fieldset>
@@ -115,15 +110,15 @@
         <li>lorem 999</li>
       </wrap-list>
     </horizontal-pan>
-  </di>
+    </di>
 
-  <script>
-    document.currentScript.remove()
+    <script>
+      document.currentScript.remove()
 
-    body.innerHTML = body.innerHTML.replace('...', Array.from(Array(994).keys(),
-      i => `<li>lorem ${i + 5}${Math.random() < .1 ? ' very long names can be there too' : ''}</li>`
-    ).join(''))
-  </script>
+      body.innerHTML = body.innerHTML.replace('...', Array.from(Array(994).keys(),
+        i => `<li>lorem ${i + 5}${Math.random() < .1 ? ' very long names can be there too' : ''}</li>`
+      ).join(''))
+    </script>
 </body>
 
 </html>

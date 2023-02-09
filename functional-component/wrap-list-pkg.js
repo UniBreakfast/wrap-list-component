@@ -6,7 +6,8 @@ function buildPanWrapList(arr) {
   }</wrap-list>`
 
   if (!stylesAdded) {
-    const sheet = document.styleSheets[0]
+    const sheet = document.styleSheets[0] 
+      || document.head.appendChild(document.createElement('style')).sheet
     
     rules.forEach(rule => sheet.insertRule(rule, sheet.cssRules.length))
     stylesAdded = true
